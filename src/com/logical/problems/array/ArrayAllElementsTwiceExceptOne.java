@@ -1,4 +1,4 @@
-package com.logical.problems.general;
+package com.logical.problems.array;
 
 public class ArrayAllElementsTwiceExceptOne {
 
