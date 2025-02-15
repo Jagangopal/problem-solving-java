@@ -1,0 +1,33 @@
+Problem Solving Java
+
+This project describes about general problem solving using java and contains the following.
+# Dynamic Programming Problems
+    1. Climbing Stairs
+# Logical Problems
+    1. Arrays
+        A. Two Dimensional Arrays
+            a. ArrayAllElementsTwiceExceptOne
+            b. BinarySearchArray
+            c. FindMinimumSortedAndRotatedArray
+            d. MajorityElementInArray
+            e. MaximumSubArray
+            f. MergeArrays
+            g. MissingNumberInArray
+            h. MoveZerosInArray
+            i. NextGreaterElementInArray
+            j. SortedAndRotatedArrays
+            k. ThreeSum
+            l. TwoSum
+    2. General
+        a. BestTimeBuyAndSellStocks
+        b. PalindromicNumber
+        c. PlatformsRequired
+    3. Median
+        a. CanAttendMeetings
+        b. PowerSet
+        c. SubsetOfAllSets
+    4. String
+        a. AllUniqueCharacterString
+        b. PermutationString
+        c. RotateStringContains
+    
