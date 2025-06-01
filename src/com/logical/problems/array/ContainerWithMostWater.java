@@ -17,6 +17,7 @@ public class ContainerWithMostWater {
                 right--;
             }
         }
+
         return max;
     }
 
