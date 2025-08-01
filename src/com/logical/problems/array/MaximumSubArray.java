@@ -16,7 +16,7 @@ public class MaximumSubArray {
         int[] arrayInputTwo = {-2,-4};
         int[] arrayInputThree = {5,4,1,7,8};
         MaximumSubArray maximumSubArray = new MaximumSubArray();
-        int result = maximumSubArray.calculateMaximumSubArray(arrayInputThree);
+        int result = maximumSubArray.calculateMaximumSubArray(arrayInput);
         System.out.println(result);
     }
 }
