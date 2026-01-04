@@ -22,8 +22,9 @@ public class EmployeeObjectGroupBy {
     }
 
     public void performGroupBy(){
-        Map<String,List<Employee>> resultMap = empList.parallelStream()
-                .collect(Collectors.groupingBy(Employee::getDeptName));
+        Map<String, List<Employee>> resultMap = empList
+                        .parallelStream()
+                        .collect(Collectors.groupingBy(Employee::getDeptName));
         System.out.println(resultMap);
     }
 

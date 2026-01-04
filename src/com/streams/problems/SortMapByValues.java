@@ -22,15 +22,15 @@ public class SortMapByValues {
     }
 
     public void sortMapStreamSolution(Map<String, Integer> inputMap){
-        Map<String, Integer> sortedByValuesMap = inputMap
+        Map<String, Integer> sortByValuesMap = inputMap
                 .entrySet()
                 .stream()
                 .sorted(Map.Entry.comparingByValue())
                 .collect(Collectors.toMap(
                         Map.Entry::getKey,
                         Map.Entry::getValue,
-                        (k, v) -> k, LinkedHashMap::new));
-        System.out.println(sortedByValuesMap);
+                        (k,v)->k,LinkedHashMap::new));
+        System.out.print(sortByValuesMap);
     }
     public static void main(String[] args){
         SortMapByValues sortMapByValues = new SortMapByValues();
@@ -41,7 +41,7 @@ public class SortMapByValues {
         inputMap.put("Java", 95);
         inputMap.put("Operating System", 79);
         inputMap.put("Networking", 80);
-        sortMapByValues.sortMapByValuesComparator(inputMap);
-        //sortMapByValues.sortMapStreamSolution(inputMap);
+        //sortMapByValues.sortMapByValuesComparator(inputMap);
+        sortMapByValues.sortMapStreamSolution(inputMap);
     }
 }

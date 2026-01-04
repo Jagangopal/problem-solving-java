@@ -6,10 +6,10 @@ import java.util.stream.Collectors;
 public class CountOccurrencesString {
 
     public Map<Character, Long> calcStreamsSolution(String message){
-        Map<Character, Long> counterMap =
-                message.chars()
-                        .mapToObj(c -> (char) c)
-                        .collect(Collectors.groupingBy(c -> c, Collectors.counting()));
+        Map<Character, Long> counterMap = message
+                .chars()
+                .mapToObj(c -> (char)c)
+                .collect(Collectors.groupingBy(c -> c,Collectors.counting()));
         return counterMap;
     }
     public String compressString(String message){

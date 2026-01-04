@@ -3,21 +3,14 @@ package com.logical.problems.array;
 public class MajorityElementInArray {
 
     public int calculateMajorityElement(int[] inputArray){
-        int candidate = inputArray[0];
-        int count = 1;
-        int maxCount = 0, maxCandidate = 0;
-        for(int i = 1; i < inputArray.length; i++){
-            count += (inputArray[i] == candidate)? 1: -1;
-
-            if(count == 0)
-                candidate = inputArray[i];
-
-            if(count > maxCount){
-                maxCount = count;
-                maxCandidate = candidate;
+        int count = 0, candidate = inputArray[0];
+        for(int value: inputArray){
+            if(count == 0){
+                candidate = inputArray[0];
             }
+            count += (value == candidate) ? 1: -1;
         }
-        return maxCandidate;
+        return candidate;
     }
 
     public static void main(String[] args){

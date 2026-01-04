@@ -1,7 +1,13 @@
 package com.dp.problems;
 
 public class LongestCommonSubstring {
-
+    /**
+     * Time complexity: O(m * n)
+     * Space Complexity: O(m * n)
+     * @param s1
+     * @param s2
+     * @return
+     */
     public static int maxCommStr(String s1, String s2){
         int m = s1.length();
         int n = s2.length();
@@ -19,6 +25,7 @@ public class LongestCommonSubstring {
         }
         return res;
     }
+
     public static void main(String[] args) {
         String s1 = "geeksforgeeks";
         String s2 = "ggeegeeksquizpractice";
