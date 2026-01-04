@@ -9,11 +9,12 @@ public class BestTimeBuyAndSellStock {
     public int calculateMaxProfit(int[] inputArray){
         int minValue = Integer.MAX_VALUE;
         int maxProfit = 0;
-        for(int value:inputArray){
-            if(value < minValue)
+        for(int value: inputArray){
+            if(value < minValue){
                 minValue = value;
-            else if ((value - minValue) > maxProfit)
+            } else if((value - minValue) > maxProfit){
                 maxProfit = value - minValue;
+            }
         }
         return maxProfit;
     }
@@ -24,7 +25,7 @@ public class BestTimeBuyAndSellStock {
      */
     public int calculateMaxProfitAnyNumberOfTransactions(int[] inputArray){
         int maxProfit = 0;
-        for(int i =1; i < inputArray.length; i++){
+        for(int i = 1; i < inputArray.length; i++){
             if(inputArray[i] - inputArray[i-1] > 0)
                 maxProfit += inputArray[i] - inputArray[i-1];
         }

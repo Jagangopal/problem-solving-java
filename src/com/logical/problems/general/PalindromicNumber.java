@@ -4,8 +4,8 @@ public class PalindromicNumber {
 
     public int calculatePalindromicNumber(int input){
         int revInteger = 0;
-        while (input > 0){
-            revInteger = revInteger * 10 + (input % 10);
+        while(input > 0){
+            revInteger = (revInteger * 10) + (input % 10);
             input = input / 10;
         }
         return revInteger;

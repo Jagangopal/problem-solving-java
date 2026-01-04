@@ -10,23 +10,25 @@ import java.util.Stack;
 public class StockSpan {
     /**
      * This method calculates stock span
+     * Time Complexity: O(n)
+     * Space Complexity: O(n)
      * @param inputArray
      * @return spans
      */
     public int[] calculateStockSpan(int[] inputArray){
         int[] spans = new int[inputArray.length];
         spans[0] = 1;
-        Stack<Integer> indexStack = new Stack<>();
-        indexStack.push(0);
-        for(int i=1; i<inputArray.length; i++){
-            while(!indexStack.isEmpty() && inputArray[indexStack.peek()] <= inputArray[i]){
-                indexStack.pop();
+        Stack<Integer> stack = new Stack<>();
+        stack.push(0);
+        for(int i = 1; i < inputArray.length; i++){
+            while(!stack.isEmpty() && inputArray[stack.peek()] <= inputArray[i]){
+                stack.pop();
             }
-            if(indexStack.isEmpty())
+            if(stack.isEmpty())
                 spans[i] = i + 1;
             else
-                spans[i] = i - indexStack.peek();
-            indexStack.push(i);
+                spans[i] = i - stack.peek();
+            stack.push(i);
         }
         return spans;
     }
